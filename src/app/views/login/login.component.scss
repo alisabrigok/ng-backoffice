@@ -1,0 +1,7 @@
+::ng-deep .mat-horizontal-stepper-header-container {
+  display: none !important;
+}
+
+::ng-deep .stepper .mat-horizontal-content-container {
+  padding-top: 24px;
+}

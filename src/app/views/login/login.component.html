@@ -1,9 +1,30 @@
-<mat-horizontal-stepper>
-  <mat-step>
-    Content 1
-    <button mat-button matStepperNext>Next</button>
-  </mat-step>
-  <mat-step>
-    Content 2
-  </mat-step>
-</mat-horizontal-stepper>
+<form class="form">
+  <mat-horizontal-stepper #stepper>
+    <mat-step>
+      <mat-form-field class="field">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" />
+      </mat-form-field>
+      <mat-form-field class="field">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" />
+      </mat-form-field>
+    </mat-step>
+    <mat-step>
+      <mat-form-field class="field">
+        <mat-label>Security Code</mat-label>
+        <input matInput placeholder="Security Code" />
+      </mat-form-field>
+    </mat-step>
+  </mat-horizontal-stepper>
+  <mat-divider></mat-divider>
+  <div class="btn-container">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="proceed($event, stepper)"
+    >
+      Next
+    </button>
+  </div>
+</form>

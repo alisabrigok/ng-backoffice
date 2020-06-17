@@ -5,3 +5,19 @@
 ::ng-deep .stepper .mat-horizontal-content-container {
   padding-top: 24px;
 }
+
+.form {
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #424242;
+}

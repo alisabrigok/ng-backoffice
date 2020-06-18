@@ -3,7 +3,8 @@
 }
 
 ::ng-deep .stepper .mat-horizontal-content-container {
-  padding-top: 24px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .form {
@@ -12,12 +13,38 @@
 
 .field {
   width: 100%;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.field:first-of-type {
+  padding-top: 24px;
 }
 
 .btn-container {
   display: flex;
-  justify-content: flex-end;
   width: 100%;
   padding: 12px 24px;
   background-color: #424242;
+}
+
+.header {
+  background-color: #424242;
+  padding: 24px 24px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.lock-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #424242;
+  padding: 24px;
+  background-color: #7b1fa2;
 }

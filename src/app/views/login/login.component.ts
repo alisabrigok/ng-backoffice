@@ -6,7 +6,7 @@ import { MatStepper } from '@angular/material/stepper';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class Login implements OnInit {
+export class LoginComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
@@ -14,5 +14,10 @@ export class Login implements OnInit {
   proceed(event: MouseEvent, stepper: MatStepper): void {
     event.preventDefault();
     stepper.next();
+  }
+
+  back(event: MouseEvent, stepper: MatStepper): void {
+    event.preventDefault();
+    stepper.previous();
   }
 }

@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardLayout } from './dashboard-layout.component';
-import { Dashboard } from '../../views/dashboard/dashboard.component';
+import { DashboardComponent } from '../../views/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardLayout,
-    children: [{ path: '', component: Dashboard }],
+    children: [{ path: '', component: DashboardComponent }],
   },
 ];
 

@@ -35,7 +35,7 @@
   align-items: center;
 }
 
-.lock-icon {
+.title-icon {
   font-size: 20px;
   margin-right: 10px;
 }
@@ -47,4 +47,20 @@
   background-color: #424242;
   padding: 24px;
   background-color: #7b1fa2;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+
+  &__icon {
+    font-size: 30px;
+  }
+
+  &__title {
+    margin-top: 12px;
+  }
 }

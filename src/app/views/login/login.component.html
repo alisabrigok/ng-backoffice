@@ -1,6 +1,6 @@
 <form class="form">
   <div class="header">
-    <mat-icon fontSet="fa" fontIcon="fa-lock" class="lock-icon"></mat-icon>
+    <mat-icon fontSet="fa" fontIcon="fa-lock" class="title-icon"></mat-icon>
     <span class="mat-title mb-0">
       Login To Backoffice
     </span>
@@ -22,7 +22,7 @@
         <mat-icon
           fontSet="fa"
           fontIcon="fa-info-circle"
-          class="lock-icon"
+          class="title-icon"
         ></mat-icon>
         <p class="mb-0">
           Please enter the security code you have received to your mobile phone.
@@ -33,21 +33,37 @@
         <input matInput placeholder="Security Code" />
       </mat-form-field>
     </mat-step>
+    <mat-step>
+      <div class="success">
+        <mat-icon
+          fontSet="fa"
+          fontIcon="fa-check-circle"
+          class="success__icon"
+        ></mat-icon>
+        <p class="mat-title success__title">
+          Success!
+        </p>
+        <p>
+          Redirecting...
+        </p>
+      </div>
+    </mat-step>
   </mat-horizontal-stepper>
   <mat-divider></mat-divider>
   <div class="btn-container">
     <button
       *ngIf="stepper.selectedIndex === 1"
       mat-button
-      (click)="back($event, stepper)"
+      (click)="back($event)"
     >
       Back
     </button>
     <app-spacer></app-spacer>
     <button
+      *ngIf="stepper.selectedIndex !== 2"
       mat-raised-button
       color="primary"
-      (click)="proceed($event, stepper)"
+      (click)="proceed($event)"
     >
       Next
     </button>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatStepper } from '@angular/material/stepper';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,17 +7,45 @@ import { MatStepper } from '@angular/material/stepper';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  @ViewChild('stepper') stepper;
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  proceed(event: MouseEvent, stepper: MatStepper): void {
-    event.preventDefault();
-    stepper.next();
+  initLogin(): void {
+    // add login init call, on success slide-in the second step.
+    this.stepper.next();
   }
 
-  back(event: MouseEvent, stepper: MatStepper): void {
+  verifyOtp(): void {
+    // add verify otp call, on success log user in.
+    this.stepper.next();
+    this.logUserIn();
+  }
+
+  logUserIn(): void {
+    setTimeout(() => {
+      this.router.navigateByUrl('/dashboard');
+    }, 1233);
+  }
+
+  proceed(event: MouseEvent): void {
     event.preventDefault();
-    stepper.previous();
+    switch (this.stepper.selectedIndex) {
+      case 0:
+        this.initLogin();
+        break;
+      case 1:
+        this.verifyOtp();
+        break;
+      default:
+        return;
+    }
+  }
+
+  back(event: MouseEvent): void {
+    event.preventDefault();
+    this.stepper.previous();
   }
 }

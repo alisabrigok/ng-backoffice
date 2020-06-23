@@ -1,4 +1,19 @@
-<div class="content" fxFlex>
-  <p>app layout works</p>
-  <router-outlet></router-outlet>
-</div>
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="snav.toggle()">
+    <mat-icon class="menu-icon" fontSet="fas" fontIcon="fa-bars"></mat-icon>
+  </button>
+  <h1>Backoffice</h1>
+</mat-toolbar>
+<mat-sidenav-container fullscreen class="nav-container">
+  <mat-sidenav #snav mode="side" opened class="nav">
+    <mat-nav-list>
+      <a mat-list-item routerLink=".">Link</a>
+      <a mat-list-item routerLink=".">Link</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>some content !!</p>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

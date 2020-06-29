@@ -4,20 +4,19 @@ import { CommonModule } from '@angular/common';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 
 import { LoginComponent } from './login.component';
-import { SpacerComponent } from 'src/app/components/spacer/spacer.component';
+import { CommonsModule } from 'src/app/shared/modules/commons.module';
 
 @NgModule({
-  declarations: [LoginComponent, SpacerComponent],
+  declarations: [LoginComponent],
   imports: [
     CommonModule,
+    CommonsModule,
     MatStepperModule,
     MatInputModule,
     MatButtonModule,
-    MatDividerModule,
     MatIconModule,
   ],
   exports: [MatStepperModule],

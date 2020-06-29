@@ -7,13 +7,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { DashboardLayoutRoutingModule } from './dashboard-layout-routing.module';
 import { DashboardLayout } from './dashboard-layout.component';
+import { CommonsModule } from 'src/app/shared/modules/commons.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    CommonsModule,
     DashboardLayoutRoutingModule,
     MatToolbarModule,
     MatIconModule,
@@ -21,6 +24,7 @@ import { DashboardLayout } from './dashboard-layout.component';
     MatButtonToggleModule,
     MatSidenavModule,
     MatListModule,
+    MatMenuModule,
   ],
   declarations: [DashboardLayout],
 })

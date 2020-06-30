@@ -1,5 +1,9 @@
 .nav-container {
-  top: 64px !important;
+  top: 56px !important;
+
+  @media only screen and (min-width: 600px) {
+    top: 64px !important;
+  }
 }
 
 .nav {

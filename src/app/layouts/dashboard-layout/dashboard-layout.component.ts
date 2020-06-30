@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard-layout.component.scss'],
 })
 export class DashboardLayout implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
+  title = this.route.snapshot.data.title;
 
   ngOnInit(): void {}
 

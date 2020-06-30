@@ -17,7 +17,6 @@ import { DashboardLayoutModule } from './layouts/dashboard-layout/dashboard-layo
     DashboardLayoutModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
   bootstrap: [App],
 })
 export class AppModule {}
